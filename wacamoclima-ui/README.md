@@ -39,3 +39,7 @@ using:
 - nvm
 - eslint
 - prettier
+
+## .env file variables
+
+VITE_W_API_KEY = YOR_API_KEY

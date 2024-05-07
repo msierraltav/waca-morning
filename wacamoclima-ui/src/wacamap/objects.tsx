@@ -1,5 +1,4 @@
 
-
 export type City = {
     country: string;
     name: string,
@@ -14,6 +13,7 @@ export type Main = {
 }
 
 export type Weather = {
+    id: number,
     main: string,
     description : string,
     icon: string,
@@ -32,10 +32,32 @@ export type Forecast = {
     list: Array<List>,
 }
 
-export type CountryCords = {
+export type CityCords = {
     name: string,
     lat: number,
     lon: number,
     x : number,
     y: number,
+}
+
+export type Country = {
+    country_name: string,
+    current_icon : string,
+    currentWeather : CurrentWeather,
+    cities : Array<CityCords>,
+}
+
+export type CurrentWeather = {
+  main: Main,
+  name: string,
+  timezone: number,
+  dt: number,
+  weather: Array<Weather>,
+  coord: Coord
+}
+
+export type Coord = {
+    lat : number,
+    lon : number,
+
 }

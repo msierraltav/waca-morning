@@ -1,24 +1,37 @@
-.container{
-    position: fixed;
-    display: absolute;
-    height: 1024;
-    width: 720;
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+
+.container {
+  font-family: "Comforta", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  left: 0;
+  top: 0;
+
+  .map-container {
+    display: flex;
+    flex-flow: row;
+    height: 720px;
+    width: 1024px;
     left: 0;
     top: 0;
-    z-index: 10;
-    
+  }
+
+  .widget-container {
+    background-image: url("../assets/guacamolito_map.svg");
+    background-repeat: no-repeat;
+    height: 720px;
+    width: 720px;
+    left: 0;
+    top: 0;
+  }
 }
 
-.map-container{
-    display: absolute;
-    height: 1024;
-    width: 720;
-    left: 0;
-    top: 0;
+.map-info {
+  display: flex;
 }
 
-.widget-container{
-    position: absolute;
-    left: 0;
-    top: 0;
-}
+
+
+
