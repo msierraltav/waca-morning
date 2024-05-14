@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import { Country , Forecast, CurrentWeather} from "../objects";
 import axios from "axios";
 import "./MapInfo.css";
+import { toIconURL } from "../mapUtils";
 
 const APIKEY = import.meta.env.VITE_W_API_KEY;
 const url = `http://api.openweathermap.org/data/2.5/forecast`;
 
 function DailyForecast ( props: {name:string, forecast:CurrentWeather }){
 
-  const currentWeatherIcon = props.forecast.weather.length > 0 ? `https://openweathermap.org/img/wn/${props.forecast.weather[0].icon}@2x.png` : '';
+  const currentWeatherIcon = props.forecast.weather.length > 0 ? toIconURL(props.forecast.weather[0]) : '';
 
   return(
     <>
@@ -19,7 +20,7 @@ function DailyForecast ( props: {name:string, forecast:CurrentWeather }){
                 <div>{props.name} :</div> 
             </div>
             <div className="daily-forecast-center">
-              <img className="current-weather-icon" src={currentWeatherIcon}></img> 
+              <img className="current-weather-icon" width='100px' height='100px' src={currentWeatherIcon}></img> 
               <div className="current-weather-description"> {props.forecast.weather[0].description}</div>
             </div>
             <div className="daily-forecast-content" >
@@ -36,7 +37,7 @@ function DailyForecast ( props: {name:string, forecast:CurrentWeather }){
 
 function NextForecast (props: {name:string, forecast:Forecast, index:number }){
 
-  const currentWeatherIcon = props.forecast?.list?.length > 0 ? `https://openweathermap.org/img/wn/${props.forecast?.list[props.index].weather[0].icon}@2x.png` : '';
+  const currentWeatherIcon = props.forecast?.list?.length > 0 ? toIconURL(props.forecast?.list[props.index].weather[0]) : '';
 
   return(
     <>
@@ -47,7 +48,7 @@ function NextForecast (props: {name:string, forecast:Forecast, index:number }){
                 <div>{props.name} :</div> 
             </div>
             <div className="daily-forecast-center">
-              <img className="current-weather-icon" src={currentWeatherIcon}></img> 
+              <img className="current-weather-icon" width='100px' height='100px' src={currentWeatherIcon}></img> 
               <div className="current-weather-description"> {props.forecast.list[props.index].weather[0].description}</div>
             </div>
             <div className="daily-forecast-content" >

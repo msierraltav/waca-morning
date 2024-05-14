@@ -1,6 +1,7 @@
 import { CityCords, Country, CurrentWeather } from "../objects";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { toIconURL } from "../mapUtils";
 import "./widget.css";
 
 // interface WidgetProps{
@@ -38,7 +39,7 @@ function Widget(props: { data: CityCords, setCurrentCity(country:Country) : any 
   useEffect(() => {
     if (currentWeather && currentWeather!.weather?.length > 0) {
       setCurrentIcon(
-        `https://openweathermap.org/img/wn/${currentWeather?.weather[0]?.icon}@2x.png`
+        toIconURL(currentWeather?.weather[0])
       );
     }
   }, [currentWeather]);
@@ -55,7 +56,7 @@ function Widget(props: { data: CityCords, setCurrentCity(country:Country) : any 
           cities: [],
         })}
       >
-        <img src={currentIcon}></img>
+        <img src={currentIcon} width='100px' height='100px'></img>
       </div>
     </>
   );
