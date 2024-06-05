@@ -15,8 +15,8 @@ const mexico: CityCords = {
 
 const spain: CityCords = {
   name: "España",
-  lat: 12.8682088,
-  lon: 124.1418908,
+  lat: 40.4165,
+  lon: -3.7026,
   x: 190,
   y: 22,
 };
