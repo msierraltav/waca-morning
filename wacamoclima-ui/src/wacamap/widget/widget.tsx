@@ -4,11 +4,6 @@ import axios from "axios";
 import { toIconURL } from "../mapUtils";
 import "./widget.css";
 
-// interface WidgetProps{
-//     data: CountryCords;
-//     setCurrentCity : any ;
-// }
-
 function Widget(props: { data: CityCords, setCurrentCity(country:Country) : any }) {
 
   const [currentWeather, setCurrentWeather] = useState<CurrentWeather | undefined >();
@@ -56,7 +51,18 @@ function Widget(props: { data: CityCords, setCurrentCity(country:Country) : any 
           cities: [],
         })}
       >
-        <img src={currentIcon} width='100px' height='100px'></img>
+        <div className="tooltiptext"> {props.data.name}</div>
+        <div>
+          <img src={currentIcon} width='100px' height='100px'></img>
+          <div className="temp-prev">
+            <div className="tooltip-country-name"> {props.data.name} </div>
+            <div className="tooltip-country-temp">
+            {Number(currentWeather?.main.temp_min).toFixed(0)}/{Number(currentWeather?.main.temp_max).toFixed(0)}
+            </div>
+          </div>
+          
+        </div>
+        
       </div>
     </>
   );
