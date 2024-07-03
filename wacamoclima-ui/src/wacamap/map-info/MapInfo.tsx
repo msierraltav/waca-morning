@@ -3,8 +3,11 @@ import { Country , Forecast, CurrentWeather} from "../objects";
 import axios from "axios";
 import "./MapInfo.css";
 import { toIconURL } from "../mapUtils";
+import { Link } from "react-router-dom";
+import { useMapContext } from "../MapContext";
 
 const APIKEY = import.meta.env.VITE_W_API_KEY;
+
 const url = `http://api.openweathermap.org/data/2.5/forecast`;
 
 function DailyForecast ( props: {name:string, forecast:CurrentWeather }){
@@ -53,7 +56,7 @@ function NextForecast (props: {name:string, forecast:Forecast, index:number }){
             </div>
             <div className="daily-forecast-content" >
               <div> ⬆️ : {Number(props.forecast.list[props.index].main.temp_max).toFixed(1)} °C </div>
-              <div> ⬇️ : {Number(props.forecast.list[props.index].main.temp_min).toFixed(1)} °C </div>
+              {/* <div> ⬇️ : {Number(props.forecast.list[props.index].main.temp_min).toFixed(1)} °C </div> */}
               {/* <div> {props.forecast.dt} </div> */}
             </div>
           </div>  
@@ -67,8 +70,11 @@ function NextForecast (props: {name:string, forecast:Forecast, index:number }){
 function MapInfo( props : {currentCountry : Country}) {
 
   // dont forget to pass by reference the current weather 
-
   // get the forecast 
+
+  const mapState = useMapContext();
+  
+  console.log('mapState - active country:', mapState.activeCountry);
 
   const [forecast, setForecast] = useState<Forecast | undefined>();
 
@@ -96,13 +102,14 @@ function MapInfo( props : {currentCountry : Country}) {
   }, [props.currentCountry]);
 
   //end forecast 
-
   return (
     <>
      {props.currentCountry && props.currentCountry.currentWeather? 
        <div className="city-forecast">
         <div className="city-forecast-header" style={{backgroundImage: `url(${props.currentCountry.current_icon})`}}>
+        <Link to={'/country/' + props.currentCountry.country_name} >
          <div className="city-forecast-name"> {props.currentCountry.country_name} </div>
+        </Link>
          <div className="city-forecast-sub-name"> {props.currentCountry.currentWeather.name} : {Number(props.currentCountry.currentWeather.main.temp).toFixed(1)} °C  </div>
        </div>
        <div className="weekly-forecast">

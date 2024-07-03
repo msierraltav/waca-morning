@@ -38,6 +38,13 @@ export type CityCords = {
     lon: number,
     x : number,
     y: number,
+    cities: Array<CityDetail>| undefined, 
+}
+
+export type CityDetail = {
+    name: string,
+    lat: number,
+    lon: number,
 }
 
 export type Country = {
@@ -60,4 +67,18 @@ export type Coord = {
     lat : number,
     lon : number,
 
+}
+
+export type Locations = {
+    country: CityCords;
+}
+
+export interface IMap{
+    activeCountry: string;
+
+}
+
+export type MapContextType = {
+    mapInfo: IMap;
+    saveMapInfo: (mapInfo: IMap) => void;
 }

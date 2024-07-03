@@ -20,11 +20,10 @@ function Widget(props: { data: CityCords, setCurrentCity(country:Country) : any 
     try {
       client
         .get(
-          `?lat=${props.data.lat}&lon=${props.data.lon}&appid=${APIKEY}&lang=es&units=metric&}`
+          `?lat=${props.data.lat}&lon=${props.data.lon}&appid=${APIKEY}&lang=es&units=metric&cnt=5 }`
         )
         .then((response) => {
           setCurrentWeather(response.data);
-          //console.log(response.data);
         });
     } catch (error) {
       console.log(error);
@@ -51,7 +50,6 @@ function Widget(props: { data: CityCords, setCurrentCity(country:Country) : any 
           cities: [],
         })}
       >
-        <div className="tooltiptext"> {props.data.name}</div>
         <div>
           <img src={currentIcon} width='100px' height='100px'></img>
           <div className="temp-prev">

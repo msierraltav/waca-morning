@@ -1,19 +1,18 @@
 import WacaMap from './wacamap/WacaMap'
+import CountryInfo from './wacamap/country-info/CountryInfo'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import NoPage from './NoPage'
 import './App.css'
 
 function App() {
-
   return (
-    <>
-      {/* <div id="clouds">
-        <div className="cloud x1"></div>
-        <div className="cloud x2"></div>
-        <div className="cloud x3"></div>
-        <div className="cloud x4"></div>
-        <div className="cloud x5"></div>
-      </div> */}
-      <WacaMap/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<WacaMap />} />
+        <Route path='/country/:name' element={<CountryInfo />} />
+        <Route path='*' element={<NoPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

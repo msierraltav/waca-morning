@@ -1,5 +1,9 @@
 .tooltip {
   position: absolute;
+  
+  :hover{
+    cursor: pointer;
+  }
 
   .temp-prev {
     padding: 0.5rem;
@@ -16,13 +20,13 @@
       display: inline;
       font-size: 0.8rem;
       color: rgb(255, 255, 255);
-      text-shadow: 0 0 2px #000000;
+      text-shadow: 0 0 3px #000000;
       white-space: nowrap;
     }
 
     .tooltip-country-temp{
       color: rgba(255, 255, 255, 0.8);
-      text-shadow: 0 0 2px #000000;
+      text-shadow: 0 0 3px #000000;
       text-align: right;
     }
   }
