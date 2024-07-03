@@ -13,4 +13,4 @@ using:
 - prettier
 
 ## First version project -> 
-[Wacamorning-map v1](wacamoclima-ui/README.md)
+[Wacamorning-map v1](wacamoclima-ui/)
