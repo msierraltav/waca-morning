@@ -1,0 +1,106 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  min-height: 100vh;
+  
+}
+.container{
+  border: 1px red solid;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  max-width: 80vw;
+}
+
+.mapContainer{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  border: 3px red solid;
+
+  height: 80vh;
+}
+
+.mapImage{
+  grid-column: 1/13;
+  grid-row: 1/13;
+  border: 3px green solid;
+  height: 80vh;
+  width: 100%;
+}
+
+.chile{
+  border: 1px red solid;
+  background-color: bisque;
+  grid-row: 4 / 5;
+  grid-column: 4 / 5;
+  height: 100%;
+}
+
+.bolivia{
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+
+.infoContainer{
+  width: 100%;
+}
+
+/*
+interesting things from Tauri/next
+  max-width: var(--max-width);
+   font-family: var(--font-mono);
+*/
+
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  .card:hover span {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .card:hover span {
+    transform: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .grid {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .vercelLogo {
+    filter: invert(1);
+  }
+
+  .logo {
+    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
