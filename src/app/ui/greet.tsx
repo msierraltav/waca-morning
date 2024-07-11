@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import {invoke} from '@tauri-apps/api/tauri';
+import { invoke } from '@tauri-apps/api/tauri';
 
 export default function Greet(){
     const [greeting, setGreeting] = useState('');

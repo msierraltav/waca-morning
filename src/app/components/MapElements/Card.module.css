@@ -1,0 +1,31 @@
+.card {
+  height: 100%;
+  width: 5vw;
+}
+
+.card > .container {
+  display: flex;
+  flex-direction: row;
+  background-color: bisque;
+}
+
+.card > .container > .weather_icon{
+  height: 100%;
+
+}
+
+.card > .container >.weather_data{
+  width: 100%;
+}
+
+/* country position */
+.chile {
+  grid-row: 4 / 5;
+  grid-column: 4 / 5;
+  
+}
+
+.bolivia {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}

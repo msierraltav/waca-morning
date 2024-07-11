@@ -1,5 +1,5 @@
-## Wacamoapp
-
+## Wacamoclima v2.0
+Desktop application to present a fantasy map with real time weather information fron diferents countries using Tauri/NextJs
 
 ## development
 

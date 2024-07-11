@@ -12,7 +12,12 @@
   },
   "tauri": {
     "allowlist": {
-      "all": false
+      "all": false,
+      "http": {
+        "all": true,
+        "request": false,
+        "scope": ["http://dataservice.accuweather.com/*"]
+      }
     },
     "bundle": {
       "active": true,
@@ -56,10 +61,10 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
+        "height": 810,
         "resizable": true,
-        "title": "wacamoclima",
-        "width": 800
+        "title": "wacamoclima desktop app",
+        "width": 1440
       }
     ]
   }
