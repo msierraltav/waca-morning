@@ -36,6 +36,7 @@ const CURRENT_CONDITIONS_URL =
       (country) => country.name === countryName
     )?.cities[0];
 
+    // first get the api key from the backedn and with that info create the url.
     invoke<string>("get_apikey")
       .then((apiKey) => {
         const URL = `${CURRENT_CONDITIONS_URL}/${currentCity?.key}?apikey=${apiKey}&language=es-mx&details=false`;
@@ -44,6 +45,7 @@ const CURRENT_CONDITIONS_URL =
       .catch(console.error);
   }, [countryName]);
 
+    // then we use the tauri api to fetch html
   useEffect(() => {
     const apiResponse = async () => {
       await fetch(url, {

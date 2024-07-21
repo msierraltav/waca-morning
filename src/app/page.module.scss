@@ -1,3 +1,4 @@
+
 .main {
   display: flex;
   flex-direction: column;
@@ -33,8 +34,8 @@
 
 /*
 interesting things from Tauri/next
-  max-width: var(--max-width);
-   font-family: var(--font-mono);
+max-width: var(--max-width);
+font-family: var(--font-mono);
 */
 
 
@@ -44,7 +45,7 @@ interesting things from Tauri/next
     background: rgba(var(--card-rgb), 0.1);
     border: 1px solid rgba(var(--card-border-rgb), 0.15);
   }
-
+  
   .card:hover span {
     transform: translateX(4px);
   }
@@ -58,7 +59,7 @@ interesting things from Tauri/next
 
 /* Mobile */
 @media (max-width: 700px) {
-
+  
 }
 
 /* Tablet and Smaller Desktop */
@@ -72,7 +73,7 @@ interesting things from Tauri/next
   .vercelLogo {
     filter: invert(1);
   }
-
+  
   .logo {
     filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
   }
@@ -86,3 +87,4 @@ interesting things from Tauri/next
     transform: rotate(0deg);
   }
 }
+

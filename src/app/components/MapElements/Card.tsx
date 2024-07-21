@@ -1,4 +1,4 @@
-import styles from "./Card.module.css";
+import styles from "./Card.module.scss";
 
 import { getWeatherIconUrl } from "../../lib/utils";
 import { GetCountryCurrentCondition } from "@/app/customHooks/GetCountryCurrentCondition";

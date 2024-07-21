@@ -94,6 +94,9 @@ body {
     )
     rgb(var(--background-start-rgb));
     background-image: url("../../public/assets/fondo_mar.png");
+
+    animation: seaMovement 30s linear(1, 0.5, 0) 0s infinite normal none;
+
 }
 
 a {
@@ -105,4 +108,19 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+/* sea image animation */
+@keyframes seaMovement {
+	0% {
+		background-position: 0% 0%;
+	}
+
+	50% {
+		background-position: 10% 0%;
+	}
+
+	100% {
+		background-position: 0% 0%;
+	}
 }

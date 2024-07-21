@@ -6,14 +6,13 @@
   flex-wrap: nowrap;
   border: 1px plum solid; */
 
-  background: linear-gradient(135deg, #FFDDC1, #FFACC1);
+  background: linear-gradient(135deg, rgba(50, 48, 159, 0.5), rgb(52, 3, 60, 1));
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-  color: #6B7280;
+  color: #ffffff;
 }
 
 .weather_icon{

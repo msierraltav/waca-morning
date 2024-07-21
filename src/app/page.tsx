@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import Card from "./components/MapElements/Card";
 import map from "../../public/assets/guacamolito_map.svg";
 import { useState } from "react";
