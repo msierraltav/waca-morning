@@ -6,7 +6,7 @@ import locations from "@/app/lib/locations";
 import { invoke } from "@tauri-apps/api/tauri";
 
 export interface UseFetchObject {
-  currentForecast : any,
+  currentForecast : CurrentCondition | undefined,
   loading : boolean,
   error : any
 }

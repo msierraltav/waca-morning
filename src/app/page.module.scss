@@ -4,13 +4,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: left;
-  min-height: 100vh;
+  height:calc(100vh - 2rem);
   
 }
 .container{
   display: grid;
   grid-template-columns: 3fr 1fr;
-  max-width: 80vw;
 }
 
 .mapContainer{
@@ -18,73 +17,22 @@
   justify-content: left;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
-  height: 80vh;
 }
 
 .mapImage{
   grid-column: 1/13;
   grid-row: 1/13;
-  height: 80vh;
-  width: 100%;
+  height: 80%;
+}
+
+.cardsContainer{
+  grid-column: 1/13;
+  grid-row: 1/13;
+  height: 80%;
 }
 
 .infoContainer{
-  width: 100%;
+ // hello !
 }
 
-/*
-interesting things from Tauri/next
-max-width: var(--max-width);
-font-family: var(--font-mono);
-*/
-
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
-  
-  .card:hover span {
-    transform: translateX(4px);
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .card:hover span {
-    transform: none;
-  }
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  
-}
-
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-  
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
 

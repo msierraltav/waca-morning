@@ -8,14 +8,18 @@ import { useState } from "react";
 
 export default function Home() {
 
-  const [currentCountry, SetCurrentCountry] =  useState('Chile');
+  const [currentCountry, SetCurrentCountry] =  useState('mexico');
+
 
   return (
     <main className={styles.main}>
       <div className={styles.container}>
         <div className={styles.mapContainer}>
           <Image className={styles.mapImage} src={map} alt="aguacate-world" />
-          <Card countryName="chile" />
+          <div className={styles.cardsContainer}>
+            <Card countryName="mexico" />
+          </div>
+          
         </div>
         <div className={styles.infoContainer}>
           <p>contenedor de informacion, siempre visible.</p>

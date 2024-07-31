@@ -39,47 +39,199 @@ import mostlyCloudyWithStorm from "../../../public/assets/icons/weather/42-s.png
 import mostlyCloudyWithFlurriesNight from "../../../public/assets/icons/weather/43-s.png";
 import mostlyCloudyWithSnowNight from "../../../public/assets/icons/weather/44-s.png";
 
+
 const WeatherImages = [
-    { id : 0 , icon : sunny},
-    { id : 1 , icon : mostlySunny},
-    { id : 3 , icon : partlySunny},
-    { id : 4 , icon : intermitentClouds},
-    { id : 5 , icon : hazySunshine},
-    { id : 6 , icon : mostlyCloudy},
-    { id : 7 , icon : cloudy},
-    { id : 8 , icon : dreary},
-    { id : 11, icon : fog},
-    { id : 12, icon : showers},
-    { id : 13, icon : mostlyCloudyWithShowers},
-    { id : 14, icon : partlySunnyWithShowers},
-    { id : 15, icon : storms},
-    { id : 16, icon : mostlyCloudyWithStorms},
-    { id : 17, icon : partlySunnyWithStorms},
-    { id : 18, icon : rain},
-    { id : 19, icon : flurries},
-    { id : 20, icon : mostlyCloudyWithFlurries},
-    { id : 21, icon : partlySunnyWithFlurries},
-    { id : 22, icon : snow},
-    { id : 23, icon : mostlyCloudyWithSnow},
-    { id : 24, icon : ice},
-    { id : 25, icon : sleet},
-    { id : 26, icon : freezingRain},
-    { id : 29, icon : rainAndSnow},
-    { id : 30, icon : hot}, 
-    { id : 31, icon : cold},
-    { id : 32, icon : windy},
-    { id : 33, icon : clear},
-    { id : 34, icon : mostlyClear},
-    { id : 35, icon : partlyCloudy},
-    { id : 36, icon : intermitentCloudsNight},
-    { id : 37, icon : hazyMoonlight},
-    { id : 38, icon : mostlyCloudyNight},
-    { id : 39, icon : partlyCloudyWithShowers},
-    { id : 40, icon : mostlyCloudyWithShowersNight},
-    { id : 41, icon : partlyCloudyWithStorms},
-    { id : 42, icon : mostlyCloudyWithStorm},
-    { id : 43, icon : mostlyCloudyWithFlurriesNight},
-    { id : 44, icon : mostlyCloudyWithSnowNight}
+    {
+        id: 0,
+        icon: sunny
+    },
+    {
+        id: 1,
+        icon: mostlySunny
+    },
+    {
+        id: 3,
+        icon: partlySunny
+    },
+    {
+        id: 4,
+        icon: intermitentClouds
+    },
+    {
+        id: 5,
+        icon: hazySunshine
+    },
+    {
+        id: 6,
+        icon: mostlyCloudy
+    },
+    {
+        id: 7,
+        icon: cloudy
+    },
+    {
+        id: 8,
+        icon: dreary
+    },
+    {
+        id: 11,
+        icon: fog
+    },
+    {
+        id: 12,
+        icon: showers
+    },
+    {
+        id: 13,
+
+        icon: mostlyCloudyWithShowers
+    },
+    {
+        id: 14,
+
+        icon: partlySunnyWithShowers
+    },
+    {
+        id: 15,
+
+        icon: storms
+    },
+    {
+        id: 16,
+
+        icon: mostlyCloudyWithStorms
+    },
+    {
+        id: 17,
+
+        icon: partlySunnyWithStorms
+    },
+    {
+        id: 18,
+
+        icon: rain
+    },
+    {
+        id: 19,
+
+        icon: flurries
+    },
+    {
+        id: 20,
+
+        icon: mostlyCloudyWithFlurries
+    },
+    {
+        id: 21,
+
+        icon: partlySunnyWithFlurries
+    },
+    {
+        id: 22,
+
+        icon: snow
+    },
+    {
+        id: 23,
+
+        icon: mostlyCloudyWithSnow
+    },
+    {
+        id: 24,
+
+        icon: ice
+    },
+    {
+        id: 25,
+
+        icon: sleet
+    },
+    {
+        id: 26,
+
+        icon: freezingRain
+    },
+    {
+        id: 29,
+
+        icon: rainAndSnow
+    },
+    {
+        id: 30,
+
+        icon: hot
+    },
+    {
+        id: 31,
+
+        icon: cold
+    },
+    {
+        id: 32,
+
+        icon: windy
+    },
+    {
+        id: 33,
+
+        icon: clear
+    },
+    {
+        id: 34,
+
+        icon: mostlyClear
+    },
+    {
+        id: 35,
+
+        icon: partlyCloudy
+    },
+    {
+        id: 36,
+
+        icon: intermitentCloudsNight
+    },
+    {
+        id: 37,
+
+        icon: hazyMoonlight
+    },
+    {
+        id: 38,
+
+        icon: mostlyCloudyNight
+    },
+    {
+        id: 39,
+
+        icon: partlyCloudyWithShowers
+    },
+    {
+        id: 40,
+
+        icon: mostlyCloudyWithShowersNight
+    },
+    {
+        id: 41,
+
+        icon: partlyCloudyWithStorms
+    },
+    {
+        id: 42,
+
+        icon: mostlyCloudyWithStorm
+    },
+    {
+        id: 43,
+
+        icon: mostlyCloudyWithFlurriesNight
+    },
+    {
+        id: 44,
+
+        icon: mostlyCloudyWithSnowNight
+    }
 ]
+
 
 export default WeatherImages;

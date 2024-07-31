@@ -16,7 +16,10 @@
       "http": {
         "all": true,
         "request": false,
-        "scope": ["http://dataservice.accuweather.com/*"]
+        "scope": [
+          "http://dataservice.accuweather.com/*", 
+          "https://api.open-meteo.com/*"
+        ]
       }
     },
     "bundle": {
