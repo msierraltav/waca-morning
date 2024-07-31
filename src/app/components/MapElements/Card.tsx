@@ -13,11 +13,7 @@ interface GetCityInterface {
 
 export default function Card(props: GetCityInterface) {
   const { countryName } = props;
-
-  //const {currentForecast, loading, error} = GetCountryCurrentCondition(countryName);
   const {currentForecast, loading, error} = GetCurrentForecast(countryName);
-
-  console.log(currentForecast, currentForecast, error);
 
   return (
     <>

@@ -52,7 +52,7 @@ interface TOpenMeteoWeatherCodes {
   };
   
   export default openMeteoWeatherCodes;
-//   // Ejemplo de uso:
+// Ejemplo de uso:
 //   const codigo = 61; // Código para lluvia ligera
 //   console.log(`Clima actual: ${openMeteoWeatherCodes[codigo]}`);
   
