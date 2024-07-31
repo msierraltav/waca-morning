@@ -1,0 +1,22 @@
+.header {
+    color: black;
+    //background-color: rgb(red, green, blue, 0.5);
+    width: 100%;
+    padding-right: 30px;
+    height: 1rem;
+    font-size: 0.5rem;
+}
+
+.header ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 10px;
+    list-style: "/";
+    padding-left: 2rem;
+}
+
+.header ul   li {
+    font-size: small;
+}

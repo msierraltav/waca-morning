@@ -1,0 +1,50 @@
+.card {
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border: 1px plum solid; */
+
+  background: linear-gradient(135deg, rgba(50, 48, 159, 0.5), rgb(52, 3, 60, 1));
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.weather_icon{
+  height: 100%;
+  flex: 1;
+}
+
+.weather_icon_img{
+  border-radius: 50%;
+  border: 5px solid #FFF;
+  background: #FFF5F7;
+}
+
+.weather_data{
+  /* width: 100%;
+  border: 1px red solid; */
+
+  flex: 2;
+  text-align: left;
+  margin-left: 20px;
+  
+}
+
+
+/* country positions */
+.chile {
+  position: relative;
+  left: 80px;
+  top: 200px;
+  width: 300px;
+}
+
+.bolivia {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+/* end countries position */
