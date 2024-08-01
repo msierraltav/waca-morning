@@ -1,3 +1,4 @@
+// keep this for informational purposes
 'use client'
 
 import { useEffect, useState } from "react";
