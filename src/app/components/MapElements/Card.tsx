@@ -40,7 +40,7 @@ export default function Card(props: GetCityInterface) {
                   <p>{countryName}</p>
                 </div>
                 <div>
-                  <p>{`Clima actual: ${openMeteoWeatherCodes[currentForecast.current.weather_code]}` }</p>
+                  <p>{`${openMeteoWeatherCodes[currentForecast.current.weather_code]}`}</p>
                   <p>
                     {currentForecast.current.temperature_2m}°
                     {currentForecast.current_units.temperature_2m}

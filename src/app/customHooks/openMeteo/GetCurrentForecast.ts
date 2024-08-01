@@ -15,7 +15,6 @@ export interface ForecastResult {
 export function GetCurrentForecast(countryName: string): ForecastResult {
 
   const [currentForecast, setCurrentForecast] = useState<TOpenMeteo>();
-  const [url, setUrl] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState(null);
   const URL = `${OPEN_METEO_API}`
