@@ -18,6 +18,8 @@ export default function Home() {
           <Image className={styles.mapImage} src={map} alt="aguacate-world" />
           <div className={styles.cardsContainer}>
             <Card countryName="mexico" />
+            <Card countryName="chile" />
+            
           </div>
           
         </div>

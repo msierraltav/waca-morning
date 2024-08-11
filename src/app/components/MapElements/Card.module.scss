@@ -11,6 +11,8 @@
   display: flex;
   align-items: center;
   color: #ffffff;
+  width: fit-content;
+  height: auto;
 }
 
 .weather_icon{
@@ -21,17 +23,29 @@
 .weather_icon_img{
   border-radius: 50%;
   border: 5px solid #FFF;
-  background: #FFF5F7;
 }
 
 .weather_data{
-  /* width: 100%;
-  border: 1px red solid; */
-
   flex: 2;
   text-align: left;
   margin-left: 20px;
-  
+
+  // title
+  & div:nth-child(1){
+      font-size: 1rem;
+      text-transform: capitalize;
+  }
+  & div:nth-child(2){
+      // weather text
+    & p:nth-child(1){
+      font-size: 0.8rem;
+      overflow-wrap: break-word;
+    }
+    // current temp
+    & p:nth-child(2){
+      font-size: 1rem;
+    }
+  }
 }
 
 
@@ -40,7 +54,12 @@
   position: relative;
   left: 80px;
   top: 200px;
-  width: 300px;
+}
+
+.mexico {
+  position: relative;
+  left: 700px;
+  top: 300px;
 }
 
 .bolivia {
