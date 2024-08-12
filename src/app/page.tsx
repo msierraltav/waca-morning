@@ -5,6 +5,7 @@ import styles from "./page.module.scss";
 import Card from "./components/MapElements/Card";
 import map from "../../public/assets/guacamolito_map.svg";
 import { useState } from "react";
+import { Forecast } from "./components/Forecast";
 
 export default function Home() {
 
@@ -19,12 +20,13 @@ export default function Home() {
           <div className={styles.cardsContainer}>
             <Card countryName="mexico" />
             <Card countryName="chile" />
+            <Card countryName="españa"/>
             
           </div>
           
         </div>
         <div className={styles.infoContainer}>
-          <p>contenedor de informacion, siempre visible.</p>
+          <Forecast />
         </div>
       </div>
     </main>

@@ -1,0 +1,27 @@
+.header{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    justify-items: stretch;
+
+    .arrows{
+        &:hover{
+            cursor:pointer;
+        }
+    }
+
+    .header_content{
+        display: flex;
+        justify-content:space-around;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        
+
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+}

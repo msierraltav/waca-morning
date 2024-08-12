@@ -1,8 +1,5 @@
 import styles from "./Card.module.scss";
-
-import { getWeatherIconUrl } from "../../lib/utils";
 import openMeteoIcons from "@/app/lib/open.meteo/images";
-import { GetCountryCurrentCondition } from "@/app/customHooks/GetCountryCurrentCondition";
 import { GetCurrentForecast } from "@/app/customHooks/openMeteo/GetCurrentForecast";
 import openMeteoWeatherCodes from "@/app/lib/open.meteo/codes";
 import Image from "next/image";
@@ -29,8 +26,8 @@ export default function Card(props: GetCityInterface) {
                 <Image
                   src={openMeteoIcons[currentForecast.current.weather_code].src}
                   alt={openMeteoWeatherCodes[currentForecast.current.weather_code]}
-                  width={100}
-                  height={100}
+                  width={50}
+                  height={50}
                   className={styles.weather_icon_img}
                 />
               </div>
