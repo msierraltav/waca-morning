@@ -2,37 +2,45 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: left;
-  height:calc(100vh - 2rem);
-  
+  max-height: calc(100vh - 2rem);
 }
 .container{
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+  height: 100%;
+  display: flex;
+
+  .mapContainer{
+    display: grid;
+    justify-content: left;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    height: 100%;
+
+    .mapImage{
+      grid-column: 1/13;
+      grid-row: 1/13;
+      height: 80%;
+    }
+
+    .cardsContainer{
+      grid-column: 1/13;
+      grid-row: 1/13;
+      height: 80%;
+    }
+  }
+
+  .infoContainer{
+    min-width: 500px;
+    height: 100%;
+  }
+  
 }
 
-.mapContainer{
-  display: grid;
-  justify-content: left;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-}
 
-.mapImage{
-  grid-column: 1/13;
-  grid-row: 1/13;
-  height: 80%;
-}
 
-.cardsContainer{
-  grid-column: 1/13;
-  grid-row: 1/13;
-  height: 80%;
-}
 
-.infoContainer{
- // hello !
-}
+
+
+
 
 

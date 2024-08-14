@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { montserrat } from "./ui/fonts";
 import "./globals.css";
 import { Header } from "./components/Header";
+import { AppContextProvider } from "./customHooks/context/AppContext";
 
 export const metadata: Metadata = {
   title: "Wacamoclima",
@@ -15,10 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} antialiased`}>
-        <Header />
-        {children}
-      </body>
+      <AppContextProvider>
+        <body className={`${montserrat.className} antialiased`}>
+          <Header />
+          {children}
+        </body>
+      </AppContextProvider>
     </html>
   );
 }

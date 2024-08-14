@@ -1,7 +1,11 @@
 
 const Today = () => {
+
   return(
-    <>hola</>
+    <div>
+      <div>☀️</div>
+      <div> 27 F</div>
+    </div>
   )};
 
 
