@@ -26,4 +26,37 @@ type TempValues = {
 
 // existe un CurrentConditionWith Details
 
+export type Tlocations = {
+  name: string,
+  country_code: string,
+  cities: Array<Tcity>,
+}
 
+export type Tcity = {
+  name: string,
+  key : string | number,
+  latitude : number,
+  longitude: number,
+}
+
+export interface TForecastData {
+  latitude: number;
+  longitude: number;
+  generationtime_ms: number;
+  utc_offset_seconds: number;
+  timezone: string;
+  timezone_abbreviation: string;
+  elevation: number;
+  daily_units: {
+      time: string; // Formato ISO8601
+      weather_code: string; // Código WMO
+      temperature_2m_max: string; // Temperatura en °C
+      temperature_2m_min: string; // Temperatura en °C
+  };
+  daily: {
+      time: string[]; // Arreglo de fechas en formato ISO8601
+      weather_code: number[]; // Arreglo de códigos WMO
+      temperature_2m_max: number[]; // Arreglo de temperaturas en °C
+      temperature_2m_min: number[]; // Arreglo de temperaturas en °C
+  };
+}

@@ -17,7 +17,6 @@ export default function Card(props: GetCityInterface) {
   const {country, setCountry} = useAppContext();
 
   const onClickHandler = () => {
-    console.log(`Country selected : ${country}`);
     setCountry(countryName);
   }
 
