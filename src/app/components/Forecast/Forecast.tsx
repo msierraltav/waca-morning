@@ -13,7 +13,7 @@ import CityForecast from "./CityForecast/CityForecast";
 export const Forecast = (): JSX.Element => {
   const { forecast, loading, error, location } = GetForecast();
   // todo , create a slider between the cities.
-
+  
   if (error) {
     console.error(error);
   }

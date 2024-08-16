@@ -55,17 +55,28 @@
   position: relative;
   left: 80px;
   top: 200px;
+  z-index: 1001;
 }
 
 .mexico {
   position: relative;
   left: 700px;
   top: 300px;
+  z-index: 1002;
 }
 
 .bolivia {
   position: relative;
   left: 0px;
   top: 0px;
+  z-index: 1003;
 }
+
+.españa{
+  position: relative;
+  left: 0px;
+  top: 0px;
+  z-index: 1004;
+}
+
 /* end countries position */

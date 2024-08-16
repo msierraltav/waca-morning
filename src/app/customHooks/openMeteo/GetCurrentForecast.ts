@@ -12,7 +12,7 @@ export interface CurrentForecastResult {
   error: any;
 }
 
-export function GetCurrentForecast(countryName: string): CurrentForecastResult {
+export function GetCurrentForecast(countryCode: string): CurrentForecastResult {
 
   const [currentForecast, setCurrentForecast] = useState<TOpenMeteo>();
   const [loading, setLoading] = useState<boolean>(true);
@@ -23,7 +23,7 @@ export function GetCurrentForecast(countryName: string): CurrentForecastResult {
   useEffect(() => {
     // first city from de cities list
     const currentCity = locations.find(
-      (country) => country.name === countryName
+      (country) => country.country_code === countryCode
     )?.cities[0];
 
     if (!currentCity) return;

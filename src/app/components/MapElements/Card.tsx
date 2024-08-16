@@ -4,19 +4,22 @@ import { GetCurrentForecast } from "@/app/customHooks/openMeteo/GetCurrentForeca
 import openMeteoWeatherCodes from "@/app/lib/open.meteo/codes";
 import Image from "next/image";
 import {useAppContext} from "@/app/customHooks/context/AppContext";
+import locations from "@/app/lib/locations";
 
 interface GetCityInterface {
-  countryName: string;
+  countryCode: string;
 }
 
 export default function Card(props: GetCityInterface) {
-  const { countryName } = props;
-  const {currentForecast, loading, error} = GetCurrentForecast(countryName);
-  const {setCountry} = useAppContext();
+  const { countryCode } = props;
+  const { currentForecast, loading, error} = GetCurrentForecast(countryCode);
+  const { setCountry} = useAppContext();
 
   const onClickHandler = () => {
-    setCountry(countryName);
+    setCountry(countryCode);
   }
+
+  const country = locations.find(x => x.country_code === countryCode);
 
   return (
     <>
@@ -25,7 +28,7 @@ export default function Card(props: GetCityInterface) {
       {loading && <div> Loading... </div>}
 
       {currentForecast ? (
-        <div className={`${styles.card} ${styles[countryName]}`} onClick={onClickHandler}>
+        <div className={`${styles.card} ${styles[countryCode]}`} onClick={onClickHandler}>
           {currentForecast && (
             <>
               <div className={styles.weather_icon}>
@@ -40,7 +43,7 @@ export default function Card(props: GetCityInterface) {
 
               <div className={styles.weather_data}>
                 <div>
-                  <p>{countryName}</p>
+                  <p>{country?.name}</p>
                 </div>
                 <div>
                   <p>{`${openMeteoWeatherCodes[currentForecast.current.weather_code]}`}</p>

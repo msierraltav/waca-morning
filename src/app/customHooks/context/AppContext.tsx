@@ -1,5 +1,6 @@
 "use client";
 import React, { createContext, useContext, useState } from "react";
+import locations from "@/app/lib/locations";
 
 type AppContext = {
   country: string,
@@ -8,7 +9,7 @@ type AppContext = {
 };
 
 const defaultAppContext : AppContext = {
-  country: "mexico",
+  country: "MX",
   setCountry : () => {},
   countryList : [],
 }
@@ -20,9 +21,12 @@ export function AppContextProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [country, setCountry] = useState("mexico");
+  const [country, setCountry] = useState("MX");
 
-  const countryList = ["chile", "españa", "mexico"];
+  // low resources list :)
+  //const countryList = ["CL", "ES", "MX"];
+
+  const countryList :string[] = locations.map((country) => country.country_code);
 
   return (
     <AppContext.Provider

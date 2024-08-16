@@ -23,7 +23,7 @@ export default function Home() {
           <div className={styles.cardsContainer}>
             {
               countryList.map((country) =>
-                <Card key={country} countryName={country} />
+                <Card key={country} countryCode={country} />
               )
             }
           </div>

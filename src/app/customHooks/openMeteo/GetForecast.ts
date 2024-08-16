@@ -26,10 +26,9 @@ export function GetForecast(): ForecastResult {
   const [loading, setLoading] = useState<boolean>(true);
   const [location, setLocation] = useState<Tlocations>();
 
-
   useEffect(() => {
 
-    const location = locations.find(x => x.name === country);
+    const location = locations.find(x => x.country_code === country);
     setLocation(location);
 
     if (location) {
