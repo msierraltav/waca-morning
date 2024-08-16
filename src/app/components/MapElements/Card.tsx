@@ -34,7 +34,7 @@ export default function Card(props: GetCityInterface) {
                 <Image
                   src={openMeteoIcons[currentForecast.current.weather_code].src}
                   alt={openMeteoWeatherCodes[currentForecast.current.weather_code]}
-                  width={50}
+                  width={-1}
                   height={50}
                   className={styles.weather_icon_img}
                 />
@@ -47,7 +47,7 @@ export default function Card(props: GetCityInterface) {
                 <div>
                   <p>{`${openMeteoWeatherCodes[currentForecast.current.weather_code]}`}</p>
                   <p>
-                    {currentForecast.current.temperature_2m}°
+                    {currentForecast.current.temperature_2m}
                     {currentForecast.current_units.temperature_2m}
                   </p>
                 </div>

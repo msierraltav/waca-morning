@@ -16,13 +16,14 @@
 }
 
 .weather_icon{
-  height: 100%;
+  // border-radius: 50%;
+  // border: 5px solid #FFF;
   flex: 1;
 }
 
 .weather_icon_img{
-  border-radius: 50%;
-  border: 5px solid #FFF;
+  height: auto;
+  width: 100%;
 }
 
 .weather_data{

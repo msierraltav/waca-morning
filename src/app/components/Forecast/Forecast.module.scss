@@ -5,11 +5,17 @@
     padding: 1.5rem;
     width: 100%;
     max-width: 42rem;
+
 }
-
-
 
 .city_forecast{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    .capitalForecast{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
 }

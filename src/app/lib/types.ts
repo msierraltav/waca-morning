@@ -50,8 +50,8 @@ export interface TForecastData {
   daily_units: {
       time: string; // Formato ISO8601
       weather_code: string; // Código WMO
-      temperature_2m_max: string; // Temperatura en °C
-      temperature_2m_min: string; // Temperatura en °C
+      temperature_2m_max: string; // Formato Temp
+      temperature_2m_min: string; // Formato Temp
   };
   daily: {
       time: string[]; // Arreglo de fechas en formato ISO8601
@@ -59,4 +59,16 @@ export interface TForecastData {
       temperature_2m_max: number[]; // Arreglo de temperaturas en °C
       temperature_2m_min: number[]; // Arreglo de temperaturas en °C
   };
+  current: {
+    time: string;
+    interval: number;
+    temperature_2m: number;
+    weather_code: number;
+  }
+  current_units: {
+    time : "string";
+    interval: "string";
+    temperature_2m: "string";
+  }
 }
+

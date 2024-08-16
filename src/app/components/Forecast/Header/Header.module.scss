@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: auto 1fr auto;
     justify-items: stretch;
+    margin-bottom: 1rem;
 
     .arrows{
         &:hover{
@@ -11,12 +12,13 @@
 
     .header_content{
         display: flex;
-        justify-content:space-around;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 10px;
         
+        div:nth-child(1){
+            margin-right: 2rem;
+        }
 
         div {
             display: flex;

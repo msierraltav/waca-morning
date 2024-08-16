@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { montserrat } from "./ui/fonts";
-import "./globals.css";
+import "./globals.scss";
 import { Header } from "./components/Header";
 import { AppContextProvider } from "./customHooks/context/AppContext";
 
