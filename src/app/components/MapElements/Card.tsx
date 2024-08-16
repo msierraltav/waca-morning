@@ -1,11 +1,9 @@
-"use client"
-
 import styles from "./Card.module.scss";
 import openMeteoIcons from "@/app/lib/open.meteo/images";
 import { GetCurrentForecast } from "@/app/customHooks/openMeteo/GetCurrentForecast";
 import openMeteoWeatherCodes from "@/app/lib/open.meteo/codes";
 import Image from "next/image";
-import {AppContext, useAppContext} from "@/app/customHooks/context/AppContext";
+import {useAppContext} from "@/app/customHooks/context/AppContext";
 
 interface GetCityInterface {
   countryName: string;
@@ -14,7 +12,7 @@ interface GetCityInterface {
 export default function Card(props: GetCityInterface) {
   const { countryName } = props;
   const {currentForecast, loading, error} = GetCurrentForecast(countryName);
-  const {country, setCountry} = useAppContext();
+  const {setCountry} = useAppContext();
 
   const onClickHandler = () => {
     setCountry(countryName);
@@ -35,7 +33,7 @@ export default function Card(props: GetCityInterface) {
                   src={openMeteoIcons[currentForecast.current.weather_code].src}
                   alt={openMeteoWeatherCodes[currentForecast.current.weather_code]}
                   width={-1}
-                  height={50}
+                  height={80}
                   className={styles.weather_icon_img}
                 />
               </div>

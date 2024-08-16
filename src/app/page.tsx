@@ -14,7 +14,12 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.container}>
         <div className={styles.mapContainer}>
-          <Image className={styles.mapImage} src={map} alt="aguacate-world" />
+          <Image 
+            className={styles.mapImage} 
+            src={map} 
+            alt="aguacate-world"
+            height={900}
+           />
           <div className={styles.cardsContainer}>
             {
               countryList.map((country) =>

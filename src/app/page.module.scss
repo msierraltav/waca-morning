@@ -1,12 +1,12 @@
 
 .main {
+  padding: 3rem;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  max-height: calc(100vh - 2rem);
+  align-items: center;
+  max-height: 100vh;
 }
 .container{
-  height: 100%;
   display: flex;
 
   .mapContainer{
@@ -14,12 +14,11 @@
     justify-content: left;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    height: 100%;
 
     .mapImage{
       grid-column: 1/13;
       grid-row: 1/13;
-      height: 80%;
+      height: 100%;
     }
 
     .cardsContainer{
@@ -30,6 +29,7 @@
   }
 
   .infoContainer{
+    padding-left: 6rem;
     min-width: 500px;
     height: 100%;
   }

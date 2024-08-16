@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { montserrat } from "./ui/fonts";
 import "./globals.scss";
-import { Header } from "./components/Header";
 import { AppContextProvider } from "./customHooks/context/AppContext";
 
 export const metadata: Metadata = {
@@ -18,7 +17,6 @@ export default function RootLayout({
     <html lang="en">
       <AppContextProvider>
         <body className={`${montserrat.className} antialiased`}>
-          <Header />
           {children}
         </body>
       </AppContextProvider>

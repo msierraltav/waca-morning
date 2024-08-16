@@ -8,6 +8,7 @@ import { GetForecast } from "@/app/customHooks/openMeteo/GetForecast";
 import { useEffect, useState } from "react";
 import { TForecastData, Tlocations } from "@/app/lib/types";
 import Day from "./Day/Day";
+import CityForecast from "./CityForecast/CityForecast";
 
 export const Forecast = (): JSX.Element => {
   const { forecast, loading, error, location } = GetForecast();
@@ -16,7 +17,6 @@ export const Forecast = (): JSX.Element => {
   if (error) {
     console.error(error);
   }
-
   return (
     <>
       {error && <div></div>}
@@ -24,24 +24,11 @@ export const Forecast = (): JSX.Element => {
       {location && forecast ? (
         <div className={style.forecast}>
           <Header location={location} todayTime={forecast[0].daily.time[0]} />
-          <div className={style.city_forecast}>
-            <Today
-              city={location.cities[0]}
-              forecast={forecast[0]}
-              dayIndex={0}
-            />
-            <div className={style.capitalForecast}>
-              {forecast[0].daily.time.slice(1).map((_, index) => (
-                // generate the daily forecast for each day
-                // but no include the first element , that is today.
-                <Day
-                  forecast={forecast[0]}
-                  dayIndex={index + 1}
-                  key={`day_forecast_${index + 1}`}
-                />
-              ))}
-            </div>
-          </div>
+          {
+            location.cities.map((_, index) => (
+              <CityForecast city={location.cities[index]} forecast={forecast[index]} />
+            ) )
+          }
         </div>
       ) : (
         <div>Country not found.</div>

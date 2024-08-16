@@ -3,7 +3,7 @@ import openMeteoIcons from "@/app/lib/open.meteo/images";
 import openMeteoWeatherCodes from "@/app/lib/open.meteo/codes";
 import Image, { StaticImageData } from "next/image";
 import style from "./Today.module.scss";
-import { Tcity, TForecastData, Tlocations } from "@/app/lib/types";
+import { Tcity, TForecastData } from "@/app/lib/types";
 
 interface TodayProps {
   city: Tcity;
@@ -23,7 +23,7 @@ const Today = ({ city, forecast, dayIndex }: TodayProps) => {
     <div className={style.today}>
       <div className={style.header}>{city.name}</div>
       <div className={style.container}>
-        <Image src={icon.src} alt={forecastText} height={50} width={-1} />
+        <Image src={icon.src} alt={forecastText} height={50} width={-1} className={style.icon}/>
         <div className={style.temperatures}>
           <span>
             <span>{forecast.current.temperature_2m}</span>

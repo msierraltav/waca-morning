@@ -1,4 +1,3 @@
-"use client"
 // the widget header component, it have a country flag, a city name and the current date of the information
 import styles from "./Header.module.scss";
 import { GetFlag } from "@/app/customHooks/flagsApi/GetFlag";
@@ -13,11 +12,10 @@ interface HeaderProps {
   todayTime : string | undefined,
 }
 
-
 const Header = ({location, todayTime} : HeaderProps) => {
 
   const flagURL = GetFlag(location.country_code);
-  const day = moment(todayTime, "YYYY-MM-DD");
+  const day = moment(todayTime, "YYYY-MM-DD").locale("es");
 
   return (
     <div className={styles.header}>

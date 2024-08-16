@@ -19,11 +19,17 @@ const Day = ({ forecast, dayIndex }: DayProps) => {
   const dayName = moment(
     forecast.daily.time[dayIndex],
     "YYYY-MM-DD"
-  );
+  ).locale('es');
   return (
     <div className={style.day}>
       <Tooltip content={forecastText} className="tooltip">
-        <Image src={icon.src} alt={forecastText} width={30} height={-1}/>
+        <Image 
+        src={icon.src} 
+        alt={forecastText} 
+        width={60} 
+        height={-1}
+        className={style.day_icon}
+        />
       </Tooltip>
       <span>{dayName.format("ddd")}</span>
       <span>{forecast.daily.temperature_2m_max[dayIndex]}</span>

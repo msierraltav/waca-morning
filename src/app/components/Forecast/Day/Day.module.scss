@@ -1,14 +1,12 @@
 .day{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 40px;
     gap: 5px;
-
-
 }
 
-.tooltip{
-    padding: 5px;
-    border-radius: 0.3rem;
-    background-color: rgba(#000000, 0.7)
+.day_icon{
+    filter: drop-shadow(0 0 10px rgba(0,0,0,.8));
 }
