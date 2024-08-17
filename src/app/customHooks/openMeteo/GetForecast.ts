@@ -6,10 +6,7 @@ import { useEffect, useState } from "react";
 import { useAppContext } from "@/app/customHooks/context/AppContext";
 import locations from "@/app/lib/locations";
 
-
-
 const OPEN_METEO_API = "https://api.open-meteo.com/v1/forecast";
-//https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&daily=weather_code,temperature_2m_max,temperature_2m_min&forecast_days=3
 
 export interface ForecastResult {
   forecast: TForecastData[] | undefined,

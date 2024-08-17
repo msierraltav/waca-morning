@@ -1,4 +1,3 @@
-
 .main {
   padding: 3rem;
   display: flex;
@@ -6,22 +5,22 @@
   align-items: center;
   max-height: 100vh;
 }
-.container{
+.container {
   display: flex;
 
-  .mapContainer{
+  .mapContainer {
     display: grid;
     justify-content: left;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 1fr);
 
-    .mapImage{
+    .mapImage {
       grid-column: 1/13;
       grid-row: 1/7;
       height: 100%;
     }
 
-    .cardsContainer{
+    .cardsContainer {
       position: relative;
       grid-column: 1/13;
       grid-row: 1/7;
@@ -29,19 +28,9 @@
     }
   }
 
-  .infoContainer{
+  .infoContainer {
     padding-left: 6rem;
     min-width: 500px;
     height: 100%;
   }
-  
 }
-
-
-
-
-
-
-
-
-
