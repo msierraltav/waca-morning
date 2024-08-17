@@ -1,30 +1,35 @@
-"use client";
-
+"use client"
 import Image from "next/image";
 import styles from "./page.module.scss";
 import Card from "./components/MapElements/Card";
 import map from "../../public/assets/guacamolito_map.svg";
-import { useState } from "react";
+import { Forecast } from "./components/Forecast";
+import { useAppContext } from "./customHooks/context/AppContext";
 
 export default function Home() {
 
-  const [currentCountry, SetCurrentCountry] =  useState('mexico');
-
+  const {countryList} = useAppContext();
 
   return (
     <main className={styles.main}>
       <div className={styles.container}>
         <div className={styles.mapContainer}>
-          <Image className={styles.mapImage} src={map} alt="aguacate-world" />
+          <Image 
+            className={styles.mapImage} 
+            src={map} 
+            alt="aguacate-world"
+            height={900}
+           />
           <div className={styles.cardsContainer}>
-            <Card countryName="mexico" />
-            <Card countryName="chile" />
-            
+            {
+              countryList.map((country) =>
+                <Card key={country} countryCode={country} />
+              )
+            }
           </div>
-          
         </div>
         <div className={styles.infoContainer}>
-          <p>contenedor de informacion, siempre visible.</p>
+          <Forecast />
         </div>
       </div>
     </main>

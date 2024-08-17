@@ -20,7 +20,7 @@ Desktop application to present a fantasy map with real time weather information 
 First init out project
 
 ```
-pnpm tauri init
+pnpm install
 
 pnpm tauri dev
 ```

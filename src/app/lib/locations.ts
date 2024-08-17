@@ -1,15 +1,4 @@
-type Tlocations = {
-  name: string,
-  country_code: string,
-  cities: Array<Tcity>,
-}
-
-type Tcity = {
-  name: string,
-  key : string | number,
-  latitude : number,
-  longitude: number,
-}
+import { Tlocations, Tcity } from "./types";
 
 const locations : Tlocations[] = [
   {

@@ -1,38 +1,36 @@
-
 .main {
+  padding: 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: left;
-  height:calc(100vh - 2rem);
-  
+  align-items: center;
+  max-height: 100vh;
 }
-.container{
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+.container {
+  display: flex;
+
+  .mapContainer {
+    display: grid;
+    justify-content: left;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+    .mapImage {
+      grid-column: 1/13;
+      grid-row: 1/7;
+      height: 100%;
+    }
+
+    .cardsContainer {
+      position: relative;
+      grid-column: 1/13;
+      grid-row: 1/7;
+      height: 100%;
+    }
+  }
+
+  .infoContainer {
+    padding-left: 6rem;
+    min-width: 500px;
+    height: 100%;
+  }
 }
-
-.mapContainer{
-  display: grid;
-  justify-content: left;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-}
-
-.mapImage{
-  grid-column: 1/13;
-  grid-row: 1/13;
-  height: 80%;
-}
-
-.cardsContainer{
-  grid-column: 1/13;
-  grid-row: 1/13;
-  height: 80%;
-}
-
-.infoContainer{
- // hello !
-}
-
-

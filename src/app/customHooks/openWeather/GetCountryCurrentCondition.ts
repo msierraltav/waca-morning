@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from "react";
-import { CurrentCondition } from "../lib/types";
+import { CurrentCondition } from "../../lib/types";
 import { fetch, ResponseType } from "@tauri-apps/api/http"
 import locations from "@/app/lib/locations";
 import { invoke } from "@tauri-apps/api/tauri";

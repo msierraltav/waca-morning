@@ -6,13 +6,13 @@ import {TOpenMeteo} from "@/app/lib/open.meteo/types";
 
 const OPEN_METEO_API = "https://api.open-meteo.com/v1/forecast";
 
-export interface ForecastResult {
+export interface CurrentForecastResult {
   currentForecast : TOpenMeteo | undefined;
   loading : boolean;
   error: any;
 }
 
-export function GetCurrentForecast(countryName: string): ForecastResult {
+export function GetCurrentForecast(countryCode: string): CurrentForecastResult {
 
   const [currentForecast, setCurrentForecast] = useState<TOpenMeteo>();
   const [loading, setLoading] = useState<boolean>(true);
@@ -23,7 +23,7 @@ export function GetCurrentForecast(countryName: string): ForecastResult {
   useEffect(() => {
     // first city from de cities list
     const currentCity = locations.find(
-      (country) => country.name === countryName
+      (country) => country.country_code === countryCode
     )?.cities[0];
 
     if (!currentCity) return;
