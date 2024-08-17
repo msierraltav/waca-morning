@@ -17,14 +17,15 @@
 
     .mapImage{
       grid-column: 1/13;
-      grid-row: 1/13;
+      grid-row: 1/7;
       height: 100%;
     }
 
     .cardsContainer{
+      position: relative;
       grid-column: 1/13;
-      grid-row: 1/13;
-      height: 80%;
+      grid-row: 1/7;
+      height: 100%;
     }
   }
 

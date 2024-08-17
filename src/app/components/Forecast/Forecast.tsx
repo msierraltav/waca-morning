@@ -13,7 +13,7 @@ import CityForecast from "./CityForecast/CityForecast";
 export const Forecast = (): JSX.Element => {
   const { forecast, loading, error, location } = GetForecast();
   // todo , create a slider between the cities.
-  
+
   if (error) {
     console.error(error);
   }
@@ -26,7 +26,11 @@ export const Forecast = (): JSX.Element => {
           <Header location={location} todayTime={forecast[0].daily.time[0]} />
           {
             location.cities.map((_, index) => (
-              <CityForecast city={location.cities[index]} forecast={forecast[index]} />
+              <CityForecast 
+                city={location.cities[index]} 
+                forecast={forecast[index]}
+                key={`city_forecast_${index}`}
+              />
             ) )
           }
         </div>
