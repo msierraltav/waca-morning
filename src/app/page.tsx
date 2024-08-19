@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import styles from "./page.module.scss";
-import Card from "./components/MapElements/Card";
+import Card from "@/app/components/MapElements/Card"
 import map from "../../public/assets/guacamolito_map.svg";
 import { Forecast } from "./components/Forecast";
 import { useAppContext } from "./customHooks/context/AppContext";
@@ -30,6 +30,7 @@ export default function Home() {
         </div>
         <div className={styles.infoContainer}>
           <Forecast />
+          <div className={styles.open_meteo}>Forecast provided by open-meteo.com</div>
         </div>
       </div>
     </main>

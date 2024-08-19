@@ -52,12 +52,14 @@ export interface TForecastData {
       weather_code: string; // Código WMO
       temperature_2m_max: string; // Formato Temp
       temperature_2m_min: string; // Formato Temp
+      wind_speed_10m_max: "string"; // formato velocidad viento
   };
   daily: {
       time: string[]; // Arreglo de fechas en formato ISO8601
       weather_code: number[]; // Arreglo de códigos WMO
       temperature_2m_max: number[]; // Arreglo de temperaturas en °C
       temperature_2m_min: number[]; // Arreglo de temperaturas en °C
+      wind_speed_10m_max: number[]; // Array of max speed per day
   };
   current: {
     time: string;

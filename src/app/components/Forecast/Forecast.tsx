@@ -1,13 +1,7 @@
 "use client";
 import Header from "./Header/Header";
 import style from "./Forecast.module.scss";
-import Today from "./Today/Today";
-import { useAppContext } from "@/app/customHooks/context/AppContext";
-import locations from "@/app/lib/locations";
 import { GetForecast } from "@/app/customHooks/openMeteo/GetForecast";
-import { useEffect, useState } from "react";
-import { TForecastData, Tlocations } from "@/app/lib/types";
-import Day from "./Day/Day";
 import CityForecast from "./CityForecast/CityForecast";
 
 export const Forecast = (): JSX.Element => {

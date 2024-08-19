@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "wacamoclima-app",
-    "version": "0.1.0"
+    "version": "1.0.0"
   },
   "tauri": {
     "allowlist": {
@@ -25,7 +25,7 @@
     },
     "bundle": {
       "active": true,
-      "category": "DeveloperTool",
+      "category": "Weather",
       "copyright": "",
       "deb": {
         "depends": []
@@ -38,7 +38,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.msierraltav.dev",
       "longDescription": "",
       "macOS": {
         "entitlements": null,

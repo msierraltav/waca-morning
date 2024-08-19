@@ -39,7 +39,7 @@ export function GetForecast(): ForecastResult {
           query: {
             latitude: latitudes.toString(),
             longitude: longitudes.toString(),
-            daily: "weather_code,temperature_2m_max,temperature_2m_min",
+            daily: "weather_code,temperature_2m_max,temperature_2m_min,wind_speed_10m_max",
             current: "temperature_2m,weather_code",
             forecast_days: "5",
             past_days: "1",
