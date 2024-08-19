@@ -2,6 +2,7 @@ import style from "./CityForecast.module.scss";
 import Today from "../Today/Today";
 import Day from "../Day/Day";
 import { Tcity, TForecastData } from "@/app/lib/types";
+import Insights from "../Insights/Insights"
 
 interface CityForecastProps {
   city: Tcity;
@@ -29,6 +30,7 @@ const CityForecast = ({ city, forecast }: CityForecastProps) => {
               />
             ))}
           </div>
+          <Insights forecast={forecast} />
         </div>
       ) : (
         <div> No Data</div>

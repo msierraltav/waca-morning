@@ -26,7 +26,7 @@ const Header = ({location, todayTime} : HeaderProps) => {
           <span>{location.name}</span>
         </div>
         <div>
-          <span>📅</span>
+          <span>🗓️</span>
           <span>{day.format("ddd DD MMM")}</span>
         </div>
       </div>

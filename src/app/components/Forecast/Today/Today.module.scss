@@ -8,6 +8,12 @@
     .header{
         font-weight: bold;
         font-size: 1.5rem;
+        //TODO: create a mixing
+        text-shadow:
+        1px 1px 0 #000,
+        -1px 1px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000;
     }
 
     .container{
