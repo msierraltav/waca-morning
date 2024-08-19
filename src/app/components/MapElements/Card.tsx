@@ -5,6 +5,7 @@ import openMeteoWeatherCodes from "@/app/lib/open.meteo/codes";
 import Image from "next/image";
 import {useAppContext} from "@/app/customHooks/context/AppContext";
 import locations from "@/app/lib/locations";
+import { GetFlag } from "@/app/customHooks/flagsApi/GetFlag";
 
 interface GetCityInterface {
   countryCode: string;
@@ -13,12 +14,13 @@ interface GetCityInterface {
 export default function Card(props: GetCityInterface) {
   const { countryCode } = props;
   const { currentForecast, loading, error} = GetCurrentForecast(countryCode);
-  const { setCountry} = useAppContext();
-
+  const { country : selectedCountry, setCountry} = useAppContext();
   const onClickHandler = () => {
     setCountry(countryCode);
   }
+  const flag = GetFlag(countryCode);
 
+  console.log('current country', selectedCountry);
   const country = locations.find(x => x.country_code === countryCode);
 
   return (
@@ -28,10 +30,19 @@ export default function Card(props: GetCityInterface) {
       {loading && <div> Loading... </div>}
 
       {currentForecast ? (
-        <div className={`${styles.card} ${styles[countryCode]}`} onClick={onClickHandler}>
+        <div className={`${country?.country_code=== selectedCountry? styles.card : styles.card_mini} ${styles[countryCode]}`  } onClick={onClickHandler}>
           {currentForecast && (
             <>
               <div className={styles.weather_icon}>
+
+                <Image 
+                  src={flag}
+                  alt={countryCode}
+                  className={styles.weather_flag}
+                  width={-1}
+                  height={32}
+                />
+
                 <Image
                   src={openMeteoIcons[currentForecast.current.weather_code].src}
                   alt={openMeteoWeatherCodes[currentForecast.current.weather_code]}
