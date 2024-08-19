@@ -30,6 +30,7 @@ export default function Home() {
         </div>
         <div className={styles.infoContainer}>
           <Forecast />
+          <div className={styles.open_meteo}>Forecast provided by open-meteo.com</div>
         </div>
       </div>
     </main>
