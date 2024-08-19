@@ -11,7 +11,7 @@ interface GetCityInterface {
   countryCode: string;
 }
 
-export default function Card(props: GetCityInterface) {
+function Card(props: GetCityInterface) {
   const { countryCode } = props;
   const { currentForecast, loading, error} = GetCurrentForecast(countryCode);
   const { country : selectedCountry, setCountry} = useAppContext();
@@ -73,3 +73,4 @@ export default function Card(props: GetCityInterface) {
     </>
   );
 }
+export default Card;
