@@ -12,7 +12,7 @@ export interface CurrentForecastResult {
   error: any;
 }
 
-export function GetCurrentForecast(countryCode: string): CurrentForecastResult {
+export function useGetCurrentForecast(countryCode: string): CurrentForecastResult {
 
   const [currentForecast, setCurrentForecast] = useState<TOpenMeteo>();
   const [loading, setLoading] = useState<boolean>(true);

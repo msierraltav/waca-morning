@@ -1,3 +1,5 @@
+@import "/src/app/styles/mixings";
+
 .weekly_insights{
     display: flex;
     flex-direction: row;
@@ -8,14 +10,9 @@
     align-items: center;
     align-content: center;
     justify-content: right;
+    @include text-border-line();
 
-    text-shadow:
-    1px 1px 0 #000,
-    -1px 1px 0 #000,
-    -1px -1px 0 #000,
-    1px -1px 0 #000;
-
-    // weekly max temperature. 
+    //weekly max temperature. 
     span:nth-child(2){
         color : rgb(255, 164, 164);
     }

@@ -1,16 +1,13 @@
 "use client";
 import Header from "./Header/Header";
 import style from "./Forecast.module.scss";
-import { GetForecast } from "@/app/customHooks/openMeteo/GetForecast";
+import { useGetForecast } from "@/app/customHooks/openMeteo/useGetForecast";
 import CityForecast from "./CityForecast/CityForecast";
 
 export const Forecast = (): JSX.Element => {
-  const { forecast, loading, error, location } = GetForecast();
+  const { forecast, loading, error, location } = useGetForecast();
   // todo , create a slider between the cities.
 
-  if (error) {
-    console.error(error);
-  }
   return (
     <>
       {error && <div></div>}

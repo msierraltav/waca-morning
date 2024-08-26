@@ -47,8 +47,8 @@ interface TopenMeteoIcons {
 const openMeteoIcons: TopenMeteoIcons = {
     0: sunny, // soleado
     1: intermitentClouds, //"Mayormente despejado"
-    2: mostlyCloudy, //"Parcialmente nublado",
-    3: cloudy, //"Nublado",
+    2: mostlySunny, //"Parcialmente nublado",
+    3: mostlyCloudy, //"Overcast ,Nublado que soleado pero hay sol",
     45: fog, //"Niebla",
     48: dreary, //"Niebla y escarcha"
     51: partlySunnyWithShowers, //"Llovizna: Intensidad ligera",

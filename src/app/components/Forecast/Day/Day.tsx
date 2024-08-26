@@ -3,8 +3,9 @@ import style from "./Day.module.scss";
 import Image from "next/image";
 import openMeteoIcons from "@/app/lib/open.meteo/images";
 import openMeteoWeatherCodes from "@/app/lib/open.meteo/codes";
-import moment from "moment";
 import { Tooltip } from "@nextui-org/tooltip";
+import dayjs from "dayjs";
+import locale_es from "dayjs/locale/es";
 
 interface DayProps {
   forecast: TForecastData;
@@ -16,10 +17,10 @@ const Day = ({ forecast, dayIndex }: DayProps) => {
   const icon = openMeteoIcons[forecast.daily.weather_code[dayIndex]];
   const forecastText: string =
     openMeteoWeatherCodes[forecast.daily.weather_code[dayIndex]];
-  const dayName = moment(
+  const dayName = dayjs(
     forecast.daily.time[dayIndex],
     "YYYY-MM-DD"
-  ).locale('es');
+  ).locale(locale_es);
   return (
     <div className={style.day}>
       <Tooltip content={forecastText} className="tooltip">

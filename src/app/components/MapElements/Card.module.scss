@@ -75,6 +75,7 @@
 
   .weather_data{
     display: none;
+    transition: display .3s ease allow-discrete;
   }
 
   .weather_icon{
