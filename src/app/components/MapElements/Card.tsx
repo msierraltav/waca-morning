@@ -19,8 +19,6 @@ function Card(props: GetCityInterface) {
     setCountry(countryCode);
   }
   const flag = useGetFlag(countryCode);
-
-  console.log('current country', selectedCountry);
   const country = locations.find(x => x.country_code === countryCode);
 
   return (

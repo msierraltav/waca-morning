@@ -57,5 +57,12 @@ $env:RUST_BACKTRACE=1
 tauri dev
 ```
 
-## First version project -> 
+### Publishing
+to publish the app and create an installable package simply run
+
+```
+pnpm tauri build
+```
+
+## First version project: 
 [Wacamorning-map v1](https://github.com/msierraltav/waca-morning/tree/vue-first-version/wacamoclima-ui)
