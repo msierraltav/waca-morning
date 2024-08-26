@@ -4,7 +4,7 @@ import styles from "./page.module.scss";
 import Card from "@/app/components/MapElements/Card"
 import map from "../../public/assets/guacamolito_map.svg";
 import { Forecast } from "./components/Forecast";
-import { useAppContext } from "./customHooks/context/AppContext";
+import { useAppContext } from "./customHooks/context/useAppContext";
 
 export default function Home() {
 

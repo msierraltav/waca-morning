@@ -1,3 +1,5 @@
+@import "../../../styles/mixings";
+
 .header{
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -16,9 +18,11 @@
         align-items: center;
         justify-content: center;
         
+        // Country Name
         div:nth-child(1){
             margin-right: 2rem;
             font-weight: bold;
+            @include text-border-line()
         }
 
         div {

@@ -1,11 +1,11 @@
 import styles from "./Card.module.scss";
 import openMeteoIcons from "@/app/lib/open.meteo/images";
-import { GetCurrentForecast } from "@/app/customHooks/openMeteo/GetCurrentForecast";
+import { useGetCurrentForecast } from "@/app/customHooks/openMeteo/useGetCurrentForecast";
 import openMeteoWeatherCodes from "@/app/lib/open.meteo/codes";
 import Image from "next/image";
-import {useAppContext} from "@/app/customHooks/context/AppContext";
+import {useAppContext} from "@/app/customHooks/context/useAppContext";
 import locations from "@/app/lib/locations";
-import { GetFlag } from "@/app/customHooks/flagsApi/GetFlag";
+import { useGetFlag } from "@/app/customHooks/flagsApi/useGetFlag";
 
 interface GetCityInterface {
   countryCode: string;
@@ -13,12 +13,12 @@ interface GetCityInterface {
 
 function Card(props: GetCityInterface) {
   const { countryCode } = props;
-  const { currentForecast, loading, error} = GetCurrentForecast(countryCode);
+  const { currentForecast, loading, error} = useGetCurrentForecast(countryCode);
   const { country : selectedCountry, setCountry} = useAppContext();
   const onClickHandler = () => {
     setCountry(countryCode);
   }
-  const flag = GetFlag(countryCode);
+  const flag = useGetFlag(countryCode);
 
   console.log('current country', selectedCountry);
   const country = locations.find(x => x.country_code === countryCode);

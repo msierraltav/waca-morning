@@ -23,7 +23,7 @@ interface TOpenMeteoWeatherCodes {
   const openMeteoWeatherCodes: TOpenMeteoWeatherCodes = {
     0: "Cielo despejado",
     1: "Mayormente despejado",
-    2: "Parcialmente nublado",
+    2: "Parcialmente nuboso",
     3: "Nublado",
     45: "Niebla",
     48: "Niebla y escarcha",

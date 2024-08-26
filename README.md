@@ -58,4 +58,4 @@ tauri dev
 ```
 
 ## First version project -> 
-[Wacamorning-map v1](wacamoclima-ui/)
+[Wacamorning-map v1](https://github.com/msierraltav/waca-morning/tree/vue-first-version/wacamoclima-ui)

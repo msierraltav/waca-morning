@@ -3,7 +3,7 @@
 import { Tcity, Tlocations, TForecastData } from "@/app/lib/types";
 import { fetch, ResponseType } from "@tauri-apps/api/http";
 import { useEffect, useState } from "react";
-import { useAppContext } from "@/app/customHooks/context/AppContext";
+import { useAppContext } from "@/app/customHooks/context/useAppContext";
 import locations from "@/app/lib/locations";
 
 const OPEN_METEO_API = "https://api.open-meteo.com/v1/forecast";
@@ -15,7 +15,7 @@ export interface ForecastResult {
   location: Tlocations | undefined,
 }
 
-export function GetForecast(): ForecastResult {
+export function useGetForecast(): ForecastResult {
 
   const { country } = useAppContext();
   const [forecast, setForecast] = useState<TForecastData[]>();

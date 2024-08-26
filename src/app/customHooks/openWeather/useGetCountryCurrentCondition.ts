@@ -12,7 +12,7 @@ export interface UseFetchObject {
 }
 
 
-export function GetCountryCurrentCondition(countryName : string): UseFetchObject {
+export function useGetCountryCurrentCondition(countryName : string): UseFetchObject {
   const [currentForecast, setCurrentForecast] = useState<CurrentCondition>();
   const [url, setUrl] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(true);

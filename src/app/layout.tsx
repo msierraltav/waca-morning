@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { montserrat } from "./ui/fonts";
 import "./globals.scss";
-import { AppContextProvider } from "./customHooks/context/AppContext";
+import { AppContextProvider } from "./customHooks/context/useAppContext";
 
 export const metadata: Metadata = {
   title: "Wacamoclima",
