@@ -41,8 +41,9 @@ export function useGetForecast(): ForecastResult {
             longitude: longitudes.toString(),
             daily: "weather_code,temperature_2m_max,temperature_2m_min,wind_speed_10m_max",
             current: "temperature_2m,weather_code",
-            forecast_days: "5",
-            past_days: "1",
+            forecast_days: "6",
+            past_days: "0",
+            timezone: "auto",
           }
         })
           .then((response) => {
