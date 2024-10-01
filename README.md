@@ -9,6 +9,7 @@ Desktop application to present a fantasy map with real time weather information 
 ## Cool Features
 
 - [x] Is a desktop app !
+- [] automatic updates
 - [x] 🌞 Real time weather information
 - [x] 🗺️ Cute map with the weather of diferent capitals cities.
 - [x] ☀️ Weather of important citye of the selected country.
@@ -62,6 +63,16 @@ to publish the app and create an installable package simply run
 
 ```
 pnpm tauri build
+```
+
+a key is needed to publish new versions and the autoupdater get it.
+[reference](https://tauri.app/v1/guides/distribution/updater/)
+
+also the following Environment  Variable is needed in the builder machine.
+
+```
+TAURI_PRIVATE_KEY : required
+TAURI_KEY_PASSWORD : optional
 ```
 
 ## First version project: 
