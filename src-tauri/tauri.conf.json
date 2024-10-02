@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "wacamoclima-app",
-    "version": "1.1.5"
+    "version": "1.2.0"
   },
   "tauri": {
     "allowlist": {
@@ -62,7 +62,7 @@
     "updater": {
       "active": true,
       "endpoints": [
-        "https://github.com/msierraltav/waca-morning/releases/download/app-v{{current_version}}/wacamoclima-app_{{current_version}}_x64-setup.exe"
+        "https://github.com/msierraltav/waca-morning/releases/download/app-v1.2.0/wacamoclima-app_1.2.0_x64-setup.msi"
       ],
       "dialog": true,
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDJDQjM0ODIzRUUzNTc4QwpSV1NNVitNK2dqVExBbzJzbTE4TU9VUlRTTWxRNU9FV2NRV3hzS3NPZjgzQVp2RmIwbnNFKzgzYgo=",
