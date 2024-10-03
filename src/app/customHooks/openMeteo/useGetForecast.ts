@@ -1,7 +1,7 @@
 "use client"
 
 import { Tcity, Tlocations, TForecastData } from "@/app/lib/types";
-import { fetch, ResponseType } from "@tauri-apps/api/http";
+import { fetch } from "@tauri-apps/plugin-http";
 import { useEffect, useState } from "react";
 import { useAppContext } from "@/app/customHooks/context/useAppContext";
 import locations from "@/app/lib/locations";
@@ -32,29 +32,28 @@ export function useGetForecast(): ForecastResult {
       const latitudes: string[] = location.cities.map(x => x.latitude.toString());
       const longitudes: string[] = location.cities.map(x => x.longitude.toString());
       const apiResponse = async () => {
-        await fetch(OPEN_METEO_API, {
-          method: "GET",
-          timeout: 30,
-          responseType: ResponseType.JSON,
-          query: {
-            latitude: latitudes.toString(),
-            longitude: longitudes.toString(),
-            daily: "weather_code,temperature_2m_max,temperature_2m_min,wind_speed_10m_max",
-            current: "temperature_2m,weather_code",
-            forecast_days: "6",
-            past_days: "0",
-            timezone: "auto",
-          }
-        })
-          .then((response) => {
-            if (response.status === 200) {
-              setForecast(response.data as TForecastData[])
+
+        const currentForecastUrl = `${OPEN_METEO_API}?latitude=${latitudes.toString()}&longitude=${longitudes.toString()}&daily=weather_code,temperature_2m_max,temperature_2m_min,wind_speed_10m_max&current=temperature_2m,weather_code&forecast_days=6&past_days=0&timezone=auto`;
+
+        await fetch(currentForecastUrl)
+          .then(response => {
+            if(response.status == 200){
+              const getJsonData = async () => {
+                await response.json()
+                .then(data => {
+                  setForecast(data);
+                })
+                .catch(error => setError(error))
+                .finally( () => setLoading(false));
+              }
+              getJsonData();
+            }else{
+              console.error("Error fetching remote resource", response);
             }
           })
           .catch(error => setError(error))
           .finally(() => setLoading(false))
       };
-
       apiResponse();
     }
 

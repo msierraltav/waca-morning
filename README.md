@@ -1,6 +1,6 @@
-## Wacamoclima v2.0 🥑
+## Wacamoclima v3.0 🥑
 
-Version : 1.2.0
+```Version : v3.0.0 using Tauri v2.0```
 
 Desktop application to present a fantasy map with real time weather information fron diferents countries using Tauri/NextJs and taking the data from Open Meteo API.
 
@@ -9,13 +9,15 @@ Desktop application to present a fantasy map with real time weather information 
 ## Cool Features
 
 - [x] Is a desktop app !
-- [] automatic updates
+- [ ] and a mobile app !!!
+- [ ] with automatic updates
 - [x] 🌞 Real time weather information
 - [x] 🗺️ Cute map with the weather of diferent capitals cities.
 - [x] ☀️ Weather of important citye of the selected country.
 - [x] 📅 Provide current time and weather in city
 - [x] 🔮 5 days forecast
 - [x] 🌡 Max and Min temp for all 5 days forecast
+- [ ] 🌈 Cute icons!
 - [ ] 🔎 Search City Forecast
 
 ## development
