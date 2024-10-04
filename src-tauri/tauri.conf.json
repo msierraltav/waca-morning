@@ -12,6 +12,7 @@
     "copyright": "",
     "targets": "all",
     "externalBin": [],
+    "createUpdaterArtifacts": true,
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",
@@ -38,22 +39,20 @@
       "deb": {
         "depends": []
       }
-    },
-    "createUpdaterArtifacts": "v1Compatible"
+    }
   },
   "productName": "wacamoclima-app",
   "mainBinaryName": "wacamoclima-app",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "identifier": "com.msierraltav.dev",
   "plugins": {
     "updater": {
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDJDQjM0ODIzRUUzNTc4QwpSV1NNVitNK2dqVExBbzJzbTE4TU9VUlRTTWxRNU9FV2NRV3hzS3NPZjgzQVp2RmIwbnNFKzgzYgo=",
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDFFRTA4NUY4RTJBMDVCNjgKUldSb1c2RGkrSVhnSG83MU9kdHBNRUhpYzE4WHRzR0xaUENtZXQzT24yMHlPdlgxSWw5UldtT2gK",
       "endpoints": [
-        "https://gist.githubusercontent.com/msierraltav/fb899a610be23963ed2a33cad6a927f0/raw/6da8199da8abf23c6084d6046a3b9e20e5c8ef1b/wacamorning-update.json"
+        "https://github.com/msierraltav/waca-morning/releases/latest/download/latest.json"
       ],
       "windows": {
-        "installMode": "basicUi",
-        "installerArgs": []
+        "installMode": "passive"
       }
     }
   },
