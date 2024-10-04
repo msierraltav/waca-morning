@@ -3,74 +3,60 @@
   "build": {
     "beforeBuildCommand": "npm run build",
     "beforeDevCommand": "npm run dev",
-    "devPath": "http://localhost:3000",
-    "distDir": "../out"
+    "frontendDist": "../out",
+    "devUrl": "http://localhost:3000"
   },
-  "package": {
-    "productName": "wacamoclima-app",
-    "version": "1.2.0"
-  },
-  "tauri": {
-    "allowlist": {
-      "all": false,
-      "http": {
-        "all": true,
-        "request": false,
-        "scope": [
-          "http://dataservice.accuweather.com/*", 
-          "https://api.open-meteo.com/*",
-          "https://flagsapi.com/*"
-        ]
-      }
+  "bundle": {
+    "active": true,
+    "category": "Weather",
+    "copyright": "",
+    "targets": "all",
+    "externalBin": [],
+    "createUpdaterArtifacts": true,
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "certificateThumbprint": null,
+      "digestAlgorithm": "sha256",
+      "timestampUrl": ""
     },
-    "bundle": {
-      "active": true,
-      "category": "Weather",
-      "copyright": "",
+    "longDescription": "",
+    "macOS": {
+      "entitlements": null,
+      "exceptionDomain": "",
+      "frameworks": [],
+      "providerShortName": null,
+      "signingIdentity": null
+    },
+    "resources": [],
+    "shortDescription": "",
+    "linux": {
       "deb": {
         "depends": []
-      },
-      "externalBin": [],
-      "icon": [
-        "icons/32x32.png",
-        "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
-        "icons/icon.ico"
-      ],
-      "identifier": "com.msierraltav.dev",
-      "longDescription": "",
-      "macOS": {
-        "entitlements": null,
-        "exceptionDomain": "",
-        "frameworks": [],
-        "providerShortName": null,
-        "signingIdentity": null
-      },
-      "resources": [],
-      "shortDescription": "",
-      "targets": "all",
-      "windows": {
-        "certificateThumbprint": null,
-        "digestAlgorithm": "sha256",
-        "timestampUrl": ""
       }
-    },
-    "security": {
-      "csp": null
-    },
+    }
+  },
+  "productName": "wacamoclima-app",
+  "mainBinaryName": "wacamoclima-app",
+  "version": "3.1.0",
+  "identifier": "com.msierraltav.dev",
+  "plugins": {
     "updater": {
-      "active": true,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDFFRTA4NUY4RTJBMDVCNjgKUldSb1c2RGkrSVhnSG83MU9kdHBNRUhpYzE4WHRzR0xaUENtZXQzT24yMHlPdlgxSWw5UldtT2gK",
       "endpoints": [
-        "https://github.com/msierraltav/waca-morning/releases/download/app-v1.2.0/wacamoclima-app_1.2.0_x64-setup.msi"
+        "https://github.com/msierraltav/waca-morning/releases/latest/download/latest.json"
       ],
-      "dialog": true,
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDJDQjM0ODIzRUUzNTc4QwpSV1NNVitNK2dqVExBbzJzbTE4TU9VUlRTTWxRNU9FV2NRV3hzS3NPZjgzQVp2RmIwbnNFKzgzYgo=",
       "windows": {
-        "installMode": "basicUi",
-        "installerArgs": []
+        "installMode": "passive"
       }
-    },
+    }
+  },
+  "app": {
     "windows": [
       {
         "fullscreen": false,
@@ -79,6 +65,9 @@
         "title": "Wacamoclima desktop app",
         "width": 1440
       }
-    ]
+    ],
+    "security": {
+      "csp": null
+    }
   }
 }
