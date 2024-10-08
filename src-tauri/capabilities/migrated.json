@@ -5,6 +5,15 @@
   "windows": [
     "main"
   ],
+  "tauri": {
+    "allowlist": {
+      "app": {
+        "all": true,
+        "show": true,
+        "hide": true
+      }
+    }
+  },
   "permissions": [
     "core:default",
     "updater:default",

@@ -1,10 +1,24 @@
 import { check } from "@tauri-apps/plugin-updater";
 import { relaunch } from "@tauri-apps/plugin-process";
+import { getVersion } from '@tauri-apps/api/app';
+import { useEffect, useState } from "react";
 
 export default function Updater() {
 
+
+  const [appVersion, setAppVersion] = useState<string>("0.0.0");
+
+  useEffect(() => {
+    const doGetVersion = async() => {
+      await getVersion()
+      .then(version => setAppVersion(version))
+      .catch(error => console.error(error));
+    }
+    doGetVersion();
+  },[])
+
   const doUpdate = async () => {
-    console.log('starting check update');
+
     const update = await check();
     if(update){
       let answer = window.confirm("Update Available , ¿ upgrade ?");
@@ -43,7 +57,7 @@ export default function Updater() {
 
   return (
     <>
-      <span onClick={() => doUpdate()}> 💫 </span>
+      <span onClick={() => doUpdate()}>{`Wacamorning v${appVersion}`} 💫 </span>
     </>
   );
 }
