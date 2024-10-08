@@ -5,6 +5,7 @@ import Card from "@/app/components/MapElements/Card"
 import map from "../../public/assets/guacamolito_map.svg";
 import { Forecast } from "./components/Forecast";
 import { useAppContext } from "./customHooks/context/useAppContext";
+import Updater from "./components/Updater/Updater";
 
 export default function Home() {
 
@@ -30,7 +31,7 @@ export default function Home() {
         </div>
         <div className={styles.infoContainer}>
           <Forecast />
-          <div className={styles.open_meteo}>Forecast provided by open-meteo.com</div>
+          <div className={styles.open_meteo}><span>Forecast provided by open-meteo.com</span> <Updater /></div>
         </div>
       </div>
     </main>
