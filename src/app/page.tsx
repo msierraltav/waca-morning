@@ -31,7 +31,7 @@ export default function Home() {
         </div>
         <div className={styles.infoContainer}>
           <Forecast />
-          <div className={styles.open_meteo}><span>Forecast provided by open-meteo.com</span> <Updater /></div>
+          <div className={styles.open_meteo}><span>Forecast provided by open-meteo.com</span> - <Updater /></div>
         </div>
       </div>
     </main>
