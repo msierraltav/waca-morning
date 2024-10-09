@@ -10,14 +10,14 @@ Desktop application to present a fantasy map with real time weather information 
 
 - [x] Is a desktop app !
 - [ ] and a mobile app !!!
-- [ ] with automatic updates
+- [x] with automatic updates
 - [x] 🌞 Real time weather information
-- [x] 🗺️ Cute map with the weather of diferent capitals cities.
+- [x] 🗺️ Cute map with the weather of different capitals cities.
 - [x] ☀️ Weather of important citye of the selected country.
 - [x] 📅 Provide current time and weather in city
 - [x] 🔮 5 days forecast
 - [x] 🌡 Max and Min temp for all 5 days forecast
-- [ ] 🌈 Cute icons!
+- [x] 🌈 Cute icons!
 - [ ] 🔎 Search City Forecast
 
 ## development
@@ -73,8 +73,8 @@ a key is needed to publish new versions and the autoupdater get it.
 also the following Environment  Variable is needed in the builder machine.
 
 ```
-TAURI_PRIVATE_KEY : required
-TAURI_KEY_PASSWORD : optional
+TAURI_SIGNING_PRIVATE_KEY : required
+TAURI_SIGNING_PRIVATE_KEY_PASSWORD : optional
 ```
 
 ## First version project: 
