@@ -1,7 +1,7 @@
-@mixin text-border-line(){
+@mixin text-border-line( $color : #000, $border-size : 1px){
     text-shadow:
-    1px 1px 0 #000,
-    -1px 1px 0 #000,
-    -1px -1px 0 #000,
-    1px -1px 0 #000;
+    $border-size $border-size 0 $color,
+    -$border-size $border-size 0 $color,
+    -$border-size -$border-size 0 $color,
+    $border-size -$border-size 0 $color;
 }

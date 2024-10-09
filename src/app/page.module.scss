@@ -1,3 +1,5 @@
+@import "/src/app/styles/mixings";
+
 .main {
   padding: 3rem;
   display: flex;
@@ -8,6 +10,7 @@
 .container {
   height: 100%;
   display: flex;
+  flex-direction: row;
 
   .mapContainer {
     display: grid;
@@ -33,6 +36,7 @@
     display: grid;
     min-height: 100%;
     grid-template-rows: auto 1fr;
+    padding-top: 0rem;
     padding-left: 6rem;
     min-width: 600px;
     height: 100%;
@@ -46,6 +50,39 @@
       color: rgb(206, 206, 206);
       background: linear-gradient(240deg, rgba(50, 48, 159, .9), rgb(52, 3, 60, 0.0));
       border-radius: 5px;
+    }
+  }
+}
+
+@media (max-width : 1200px) {
+  .container{
+    flex-direction: column;
+
+    .mapContainer{
+      transform: scale(0.9);
+      // transform-origin: 0% 0% 0px;
+     }
+
+    .infoContainer{
+      padding-left: 0rem;
+      padding-top: 2rem;
+
+      .open_meteo{
+        margin-top: 0.5rem;
+      }
+    }
+
+    &:before {
+      content:"Wacamorning Weather:";
+      font-family: "BodoAmat";
+      font-size: 2rem;
+      text-align: center;
+      color: #f9fbfb;
+      @include text-border-line(#453173, 2px);
+      background-color: #45317353;
+      border-radius: 0.5rem;
+      max-width: fit-content;
+      align-self: center;
     }
   }
 }
