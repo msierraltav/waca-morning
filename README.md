@@ -76,6 +76,14 @@ also the following Environment  Variable is needed in the builder machine.
 TAURI_SIGNING_PRIVATE_KEY : required
 TAURI_SIGNING_PRIVATE_KEY_PASSWORD : optional
 ```
+### Publishing on Android
+
+to publish and create an Android APK simply run the next command
+
+```cmd
+pnpm tauri android init
+pnpm tauri android build --apk
+```
 
 ## First version project: 
 [Wacamorning-map v1](https://github.com/msierraltav/waca-morning/tree/vue-first-version/wacamoclima-ui)

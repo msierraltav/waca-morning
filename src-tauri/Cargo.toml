@@ -1,6 +1,6 @@
 [package]
 name = "app"
-version = "3.3.0"
+version = "3.3.1"
 description = "Wacamorning app"
 authors = ["msierraltav"]
 license = ""
@@ -12,7 +12,7 @@ rust-version = "1.60"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [build-dependencies]
-tauri-build = { version = "2.0.0-rc", features = [] }
+tauri-build = { version = "2.0.1", features = [] }
 
 [dependencies]
 serde_json = "1.0"
@@ -30,7 +30,7 @@ tauri-plugin-process = "2"
 custom-protocol = [ "tauri/custom-protocol" ]
 
 [target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
-tauri-plugin-updater = "2.0.0-rc"
+tauri-plugin-updater = "2.0.2"
 
 [lib]
 name = "app_lib"

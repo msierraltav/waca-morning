@@ -16,7 +16,7 @@
   },
   "permissions": [
     "core:default",
-    "updater:default",
+    "updater:allow-download-and-install",
     {
       "identifier": "http:default",
       "allow": [
