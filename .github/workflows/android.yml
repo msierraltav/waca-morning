@@ -25,13 +25,24 @@ jobs:
 
       - uses: Swatinem/rust-cache@v2
 
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 19.8.1
-          cache: "npm"
-          cache-dependency-path: "**/package-lock.json"
+    #   - uses: actions/setup-node@v2
+    #     with:
+    #       node-version: 19.8.1
+    #       cache: "npm"
+    #       cache-dependency-path: "**/package-lock.json"
 
-      - run: cd frontend ; npm install ; npm fund
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: install pnpm
+        uses: pnpm/action-setup@v4
+        with: 
+          version: 9
+
+      - name: install frontend dependencies
+        run: pnpm install # change this to npm, pnpm or bun depending on which one you use.
 
       - name: Install Java 17
         uses: actions/setup-java@v3
@@ -67,7 +78,7 @@ jobs:
         run: |
           cargo install create-tauri-app
           rustup target add aarch64-linux-android armv7-linux-androideabi i686-linux-android x86_64-linux-android
-          cargo install tauri-cli --version "^2.0.0-alpha.10"
+          cargo install tauri-cli --version "^2.0.0"
 
       - name: Build Android App
         env:
