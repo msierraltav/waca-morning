@@ -6,6 +6,7 @@ import map from "../../public/assets/guacamolito_map.svg";
 import { Forecast } from "./components/Forecast";
 import { useAppContext } from "./customHooks/context/useAppContext";
 import Updater from "./components/Updater/Updater";
+import Search from "./components/Search/Search";
 
 export default function Home() {
 
@@ -13,6 +14,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
+      <Search />
       <div className={styles.container}>
         <div className={styles.mapContainer}>
           <Image 

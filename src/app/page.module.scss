@@ -54,7 +54,7 @@
   }
 }
 
-@media (max-width : 1200px) {
+@media (max-width : $max-mobile-width) {
   .container{
     flex-direction: column;
 

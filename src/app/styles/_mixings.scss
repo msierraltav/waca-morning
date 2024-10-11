@@ -1,3 +1,10 @@
+// global vars
+
+$max-mobile-width : 1200px; //1200px
+$max-desktop-width: 1920px;
+
+// mixins
+
 @mixin text-border-line( $color : #000, $border-size : 1px){
     text-shadow:
     $border-size $border-size 0 $color,
