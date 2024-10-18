@@ -39,6 +39,9 @@
       "deb": {
         "depends": []
       }
+    },
+    "android": {
+      "minSdkVersion": 34
     }
   },
   "productName": "wacamoclima-app",

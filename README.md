@@ -28,6 +28,10 @@ First init out project
 pnpm install
 
 pnpm tauri dev
+
+# in android development
+pnpm tauri android init
+pnpm tauri android dev
 ```
 
 ### update dependencies
@@ -85,5 +89,22 @@ pnpm tauri android init
 pnpm tauri android build --apk
 ```
 
+
 ## First version project: 
 [Wacamorning-map v1](https://github.com/msierraltav/waca-morning/tree/vue-first-version/wacamoclima-ui)
+
+
+## Troubleshoting
+
+
+### OpenSSL on Windows 11
+
+On Windows 11 I had a lot of issues with OpenSSL , was not possible to detect the installation of it.
+to solve it is necessary to install OpenSSL , and use the following reqewst package into Cargo.toml
+
+Error with OpenSSL on Windows 11 : https://www.wilivm.com/blog/install-openssl-on-windows-10-11/ 
+
+```toml
+//Cargo.toml
+reqwest = { version = "0.12.7", default-features = false, features = ["rustls-tls"] }
+```

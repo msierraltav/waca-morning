@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@nextui-org/tooltip": "^2.0.39",
-    "@tauri-apps/api": "^2.0.0",
+    "@tauri-apps/api": "^2.0.2",
     "@tauri-apps/plugin-http": "^2.0.0",
     "@tauri-apps/plugin-process": "~2",
     "@tauri-apps/plugin-updater": "2.0.0",
@@ -20,7 +20,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^2.0.0",
+    "@tauri-apps/cli": "^2.0.3",
     "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
