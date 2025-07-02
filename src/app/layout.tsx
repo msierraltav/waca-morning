@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { montserrat } from "./ui/fonts";
 import "./globals.scss";
 import { AppContextProvider } from "./customHooks/context/useAppContext";
@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: "Wacamoclima",
   description: "El clima en el reino aguacte",
 };
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
 
 export default function RootLayout({
   children,

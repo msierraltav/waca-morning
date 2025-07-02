@@ -1,27 +1,51 @@
 @import "/src/app/styles/mixings";
 
-.weekly_insights{
-    display: flex;
+/* Mobile-first responsive design for weekly insights */
+.weekly_insights {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  grid-row: 2/3;
+  grid-column: 1/3;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  @include text-border-line();
+  
+  @media (min-width: 768px) {
     flex-direction: row;
     text-align: right;
-    grid-row: 2/3;
-    grid-column: 1/3;
     gap: 1rem;
-    align-items: center;
-    align-content: center;
     justify-content: right;
-    @include text-border-line();
+  }
 
-    //weekly max temperature. 
-    span:nth-child(2){
-        color : rgb(255, 164, 164);
+  // weekly max temperature
+  span:nth-child(2) {
+    color: rgb(255, 164, 164);
+    font-size: 0.9rem;
+    
+    @media (min-width: 1024px) {
+      font-size: 1rem;
     }
+  }
 
-    //weekly min tempearture.
-    span:nth-child(3){
-        color : rgb(112, 198, 255);
+  // weekly min temperature
+  span:nth-child(3) {
+    color: rgb(112, 198, 255);
+    font-size: 0.9rem;
+    
+    @media (min-width: 1024px) {
+      font-size: 1rem;
     }
-    span:nth-child(4){
-        color: azure;
+  }
+  
+  span:nth-child(4) {
+    color: azure;
+    font-size: 0.9rem;
+    
+    @media (min-width: 1024px) {
+      font-size: 1rem;
     }
+  }
 }
