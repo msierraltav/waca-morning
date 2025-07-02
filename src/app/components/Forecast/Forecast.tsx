@@ -13,7 +13,7 @@ export const Forecast = (): JSX.Element => {
       {error && <div></div>}
       {loading && <div>🕑</div>}
       {location && forecast ? (
-        <div className={style.forecast}>
+        <div id="ForecastContainer" className={style.forecast}>
           <Header location={location} todayTime={forecast[0].current.time} />
           {
             location.cities.map((_, index) => (

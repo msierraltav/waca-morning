@@ -1,3 +1,5 @@
+@import "/src/app/styles/mixings";
+
 /* Mobile-first approach: Start with mobile styles as base */
 .main {
   /* Mobile base styles */
@@ -108,6 +110,46 @@
         justify-self: right;
         font-size: 0.9rem;
       }
+    }
+  }
+}
+
+@media (max-width : $max-mobile-width) {
+
+  .container{
+    flex-direction: column;
+    height: 100vh;
+
+    .mapContainer{
+      transform: scale(0.45);
+      transform-origin: 50% 0% 0px;
+      height: fit-content;
+      margin-bottom: -50vh;
+     }
+
+    .infoContainer{
+      padding-left: 0rem;
+      padding-top: 2rem;
+      transform: scale(0.5);
+      margin-top: -23vh;
+
+      .open_meteo{
+        margin-top: 0.5rem;
+      }
+    }
+
+    &:before {
+      content:"Wacamorning Clima:";
+      font-family: "BodoAmat";
+      font-size: 1.5rem;
+      text-align: center;
+      color: #f9fbfb;
+      @include text-border-line(#453173, 2px);
+      background-color: #45317353;
+      border-radius: 0.5rem;
+      align-self: center;
+      margin-bottom: 1rem;
+      margin-top: -30px;
     }
   }
 }

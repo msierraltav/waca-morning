@@ -6,8 +6,7 @@
     "linux"
   ],
   "permissions": [
-    "updater:default",
-    "http:default",
-    "updater:default"
+    "updater:allow-download-and-install",
+    "http:default"
   ]
 }
